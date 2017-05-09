@@ -123,19 +123,19 @@ end
 for i = i:length(HR)
        Status_panel = 'Running';
        if (SpO2(i)>95)
-          Result_panel = 'Normal';YN_panel='No';
+          Result_panel = 'Normal';
        elseif (SpO2(i)>=92 & SpO2(i)<=92 & HR<110)
-          Result_panel = 'Mild/Moderate';YN_panel='Yes';
+          Result_panel = 'Mild/Moderate';
        elseif (SpO2(i)>=92 & SpO2(i)<=92 & HR>110)
-          Result_panel = 'Acute';YN_panel='Yes';
+          Result_panel = 'Acute';
        elseif (SpO2(i)<92)
-          Result_panel = 'Life Threatening';YN_panel='Yes';
+          Result_panel = 'Life Threatening';
        end   
        disp(Status_panel);disp(Result_panel); 
 end
 set(handles.Status,'string',Status_panel)
-set(handles.YN_results,'string',YN_panel)
-set(handles.severity_result,'string',Result_panel)
+set(handles.YN_results,'string',Result_panel)
+set(handles.YN_results,'string',Result_panel)
 axes(handles.SpO2_plot);
 plot(SpO2,'b');hold on;
 

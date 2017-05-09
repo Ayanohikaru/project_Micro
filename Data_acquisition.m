@@ -23,21 +23,6 @@ end
 
 %% Annotation 
 %CLASSIFICATION
-%MILD/ MODERATE: 92 <= SpO2 <= 95, 20 < RESP =< 25, PULSE < 110
-%ACUTE SEVERE:   92 <= SpO2 <= 95, RESP > 25, PULSE >=110
-%LIFE THREATENING: SpO2 < 92
-
-% % MILD/ MODERATE
-% %         asth_locMM = find((n_SpO2 >=92 & n_SpO2 <=95 & n_RESP > 20 & n_RESP <=25 & n_PULSE <110));
-% % ACUTE SEVERE
-% %         asth_locAS = find((n_SpO2 >=92 & n_SpO2 <=95 & n_RESP > 25 & n_PULSE >= 110));
-% % LIFE THREATENING
-% %         asth_locLT = find(n_SpO2 <92);
-% % GENERAL CASE
-% %         asth_locGE = find((n_SpO2 >=92 & n_SpO2 <=95 & n_RESP > 20 & n_RESP <=25 & n_PULSE <110)| n_SpO2 < 92 |(n_SpO2 >=92 & n_SpO2 <=95 & n_RESP > 25 & n_PULSE >= 110));
-% %     if iscell(fileNameLIST)==0
-% %         fileNameLIST = (fileNameLIST);
-% %     end
 for i = i:length(HR)
        Status_panel = 'Running';
        if (SpO2(i)>95)
